@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
+        'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
+
+<mapper namespace='Mappers.CommentMapper'>
+
+    <select id='getComment' parameterType='int' resultType='Comment' resultMap="CommentResult">
+        SELECT *
+        FROM comments
+        WHERE postId = #{id}
+    </select>
+
+    <select id='getAllComments' resultMap='CommentResult'>
+        SELECT *
+        FROM comments
+    </select>
+
+    <insert id='addComment' parameterType='Comment' useGeneratedKeys='true' keyProperty='id'>
+        INSERT INTO comments(postId, name, email, body)
+        VALUES (#{postId}, #{name}, #{email}, #{body})
+    </insert>
+
+    <update id='updateComment' parameterType='Comment'>
+        UPDATE comments
+        SET postId = #{postId},
+            name   = #{name},
+            email  = #{email},
+            body   = #{body}
+        WHERE id = #{id}
+    </update>
+
+    <delete id='deleteComment' parameterType='int'>
+        DELETE
+        FROM comments
+        WHERE id = #{id}
+    </delete>
+
+    <resultMap type='Comment' id='CommentResult'>
+        <id property='id' column='id'/>
+        <result property='postId' column='postId'/>
+        <result property='name' column='name'/>
+        <result property="email" column="email"/>
+        <result property='body' column='body'/>
+    </resultMap>
+</mapper>

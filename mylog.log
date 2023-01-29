@@ -1,0 +1,34 @@
+Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+PooledDataSource forcefully closed/removed all connections.
+PooledDataSource forcefully closed/removed all connections.
+PooledDataSource forcefully closed/removed all connections.
+PooledDataSource forcefully closed/removed all connections.
+Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+PooledDataSource forcefully closed/removed all connections.
+PooledDataSource forcefully closed/removed all connections.
+PooledDataSource forcefully closed/removed all connections.
+PooledDataSource forcefully closed/removed all connections.
+Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+PooledDataSource forcefully closed/removed all connections.
+PooledDataSource forcefully closed/removed all connections.
+PooledDataSource forcefully closed/removed all connections.
+PooledDataSource forcefully closed/removed all connections.
+Opening JDBC Connection
+Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+PooledDataSource forcefully closed/removed all connections.
+PooledDataSource forcefully closed/removed all connections.
+PooledDataSource forcefully closed/removed all connections.
+PooledDataSource forcefully closed/removed all connections.
+Opening JDBC Connection
+Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+PooledDataSource forcefully closed/removed all connections.
+PooledDataSource forcefully closed/removed all connections.
+PooledDataSource forcefully closed/removed all connections.
+PooledDataSource forcefully closed/removed all connections.
+Opening JDBC Connection
+Created connection 667400341.
+==>  Preparing: SELECT * FROM posts
+==> Parameters: 
+<==      Total: 2
+Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@27c7b895]
+Returned connection 667400341 to pool.

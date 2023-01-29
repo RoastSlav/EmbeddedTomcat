@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
+        'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
+
+<mapper namespace='Mappers.PostMapper'>
+
+    <select id='getPost' parameterType='int' resultType='Post' resultMap="PostResult">
+        SELECT *
+        FROM posts
+        WHERE id = #{id}
+    </select>
+
+    <select id='getAllPosts' resultMap='PostResult'>
+        SELECT *
+        FROM posts
+    </select>
+
+    <insert id='addPost' parameterType='Post' useGeneratedKeys='true' keyProperty='id'>
+        INSERT INTO posts(userId, title, body)
+        VALUES (#{userId}, #{title}, #{body})
+    </insert>
+
+    <update id='updatePost' parameterType='Post'>
+        UPDATE posts
+        SET userId = #{userId},
+            title  = #{title},
+            email  = #{email},
+            WHERE id = #{id}
+    </update>
+
+    <delete id='deletePost' parameterType='int'>
+        DELETE
+        FROM posts
+        WHERE id = #{id}
+    </delete>
+
+    <resultMap type='Post' id='PostResult'>
+        <id property='id' column='id'/>
+        <result property='userId' column='userId'/>
+        <result property='title' column='title'/>
+        <result property='body' column='body'/>
+    </resultMap>
+</mapper>
